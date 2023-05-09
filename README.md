@@ -50,7 +50,7 @@ This is the example when you want to define your configuration while creating ne
   <?php
   
   $cpanel = new src\Cpanel([
-      'host'        =>  'https://123.456.789.123:2087', // required
+      'host'        =>  'https://1.2.3.4:2087', // required
       'username'    =>  'root', // required
       'auth_type'   =>  'hash', // optional, default 'hash'
       'password'    =>  'password', // required
@@ -132,4 +132,5 @@ After you define some of your configuration, you can get it again by calling thi
 
 #### Feedback and contribution
 
-This package is free and open source, feel free to fork and report some issue to this package. :-). Have fun
+Pull requests are super welcome :-)
+
