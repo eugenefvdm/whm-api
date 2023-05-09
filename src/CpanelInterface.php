@@ -1,18 +1,11 @@
 <?php
-namespace Gufy\CpanelPhp;
 
+namespace Eugenevdm\WhmApi;
 
 /**
- * cPanel/WHM API
+ * WHM/cPanel API
  *
  * Provides easy to use class for calling some CPanel/WHM API functions.
- *
- * @author Mochamad Gufron <mgufronefendi@gmail.com>
- *
- * @version v1.0.2
- *
- * @link https://github.com/mgufrone/cpanel-php
- * @since v1.0.0
  */
 interface CpanelInterface
 {

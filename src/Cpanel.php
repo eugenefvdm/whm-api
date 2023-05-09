@@ -1,41 +1,33 @@
-<?php namespace Gufy\CpanelPhp;
+<?php
 
+namespace Eugenevdm\WhmApi;
+
+use Eugenevdm\WhmApi\Exception;
+use Eugenevdm\WhmApi\GuzzleHttp;
 use GuzzleHttp\Client;
 
 /**
- * cPanel/WHM API
+ * WHM/cPanel API
  *
- * Provides easy to use class for calling some CPanel/WHM API functions.
+ * Provides easy to use class for calling some WHM/cPanel API functions.
  *
- * @author Mochamad Gufron <mgufronefendi@gmail.com>
- *
- * @version v1.0.2
- *
- * @link https://github.com/mgufrone/cpanel-php
- * @since v1.0.0
  */
 class Cpanel implements CpanelInterface
 {
     use CpanelShortcuts;
 
     /**
-     * @var string Username of your whm server. Must be string
-     *
-     * @since v1.0.0
+     * @var string Username of your WHM server. Must be string.
      */
     private $username;
 
     /**
-     * @var string Password or long hash of your whm server.
-     *
-     * @since v1.0.0
+     * @var string Password or long hash of your WHM server.
      */
     private $password;
 
     /**
      * @var string Authentication type you want to use. You can set as 'hash' or 'password'.
-     *
-     * @since v1.0.0
      */
     private $auth_type;
 

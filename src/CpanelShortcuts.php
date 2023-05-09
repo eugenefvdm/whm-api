@@ -1,11 +1,13 @@
-<?php namespace Gufy\CpanelPhp;
+<?php
+
+namespace Eugenevdm\WhmApi;
 
 /**
  * Trait CpanelShortcuts
  *
- * A handful of shortcuts for getting things done(tm)
+ * A handful of shortcuts for getting things done
  *
- * @package Gufy\CpanelWhm
+ * @package Eugenevdm\WhmApi
  */
 trait CpanelShortcuts
 {

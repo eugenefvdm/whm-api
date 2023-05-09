@@ -1,5 +1,7 @@
 <?php
-use Gufy\CpanelPhp\Cpanel;
+
+use src\Cpanel;
+
 class CpanelTest extends PHPUnit_Framework_TestCase
 {
   public function testConfiguration()
@@ -16,5 +18,4 @@ class CpanelTest extends PHPUnit_Framework_TestCase
     $this->assertEquals($options['password'], $cpanel->getPassword());
     $this->assertEquals($options['auth_type'], $cpanel->getAuthType());
   }
-
 }

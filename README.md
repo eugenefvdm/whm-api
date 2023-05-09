@@ -4,30 +4,36 @@
 - [Installation Guide](#installation-guide)
 - [Usage](#usage)
 - [Functions](#functions)
-- [Feedback & Contribution](#feedback-&-contribution)
+- [Feedback & Contribution](#feedback-and-contribution)
 
 ### Installation Guide
 
-To install this package, you can run this code via your terminal
+To install this package, you can run this code via your terminal:
+
 ```shell
 	composer require eugenevdm/whm-api
 ```
-
 ### Usage
 
-For example, if you would like to get list accounts of your whm server, you can do this.
+If you would like to get list accounts of your WHM server you can do this:
 
 ```php
-  <?php
-  $cpanel = new \Eugenevdm\WhmApi\Cpanel([
-      'host'        =>  'https://123.456.789.123:2087', // ip or domain complete with its protocol and port
-      'username'    =>  'root', // username of your server, it usually root.
-      'auth_type'   =>  'hash', // set 'hash' or 'password'
-      'password'    =>  'password', // long hash or your user's password
-  ]);
+<?php
 
-  $accounts = $cpanel->listaccts(); // it will returned as array
+    require_once __DIR__ . '/vendor/autoload.php';
 
+    use Eugenevdm\WhmApi\Cpanel;  
+  
+    $cpanel = new src\Cpanel([
+        'host'        =>  'https://1.2.3.4:2087', // ip or domain complete with its protocol and port
+        'username'    =>  'root', // username of your server, it is usually root
+        'auth_type'   =>  'hash', // set 'hash' or 'password'
+        'password'    =>  'password', // long hash or your user's password
+    ]);
+
+    $accounts = $cpanel->listaccts(); // results returned as an array
+  
+    echo print_r($accounts, true);
 ```
 
 ### Functions
@@ -42,7 +48,8 @@ This is the example when you want to define your configuration while creating ne
 
 ```php
   <?php
-  $cpanel = new \Eugenevdm\WhmApi\Cpanel([
+  
+  $cpanel = new src\Cpanel([
       'host'        =>  'https://123.456.789.123:2087', // required
       'username'    =>  'root', // required
       'auth_type'   =>  'hash', // optional, default 'hash'
@@ -51,7 +58,7 @@ This is the example when you want to define your configuration while creating ne
 ```
 
 #### Usage
-For example, you would like to get some list accounts from cPanel/WHM
+For example, you would like to get some list accounts from WHM/cPanel
 ```php
 	<?php
 
@@ -95,7 +102,7 @@ Somehow, you want to override your current configuration. To do this, here is th
 
 ```php
   <?php
-  // change username andd (password or hash)
+  // change username and (password or hash)
   $cpanel->setAuthorization($username, $password);
 
   // change host
