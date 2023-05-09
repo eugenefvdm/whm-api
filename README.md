@@ -1,4 +1,4 @@
-## cPanel/WHM API for PHP library
+## WHM/cPanel API for PHP
 
 ## Contents
 - [Installation Guide](#installation-guide)
@@ -10,16 +10,7 @@
 
 To install this package, you can run this code via your terminal
 ```shell
-	composer require gufy/cpanel-php:~2.0
-```
-Or update your `composer.json` by adding this line
-```json
-	"gufy/cpanel-php":"~2.0"
-```
-
-Then, run this code
-```shell
-	composer update
+	composer require eugenevdm/whm-api
 ```
 
 ### Usage
@@ -28,7 +19,7 @@ For example, if you would like to get list accounts of your whm server, you can 
 
 ```php
   <?php
-  $cpanel = new \Gufy\CpanelPhp\Cpanel([
+  $cpanel = new \Eugenevdm\WhmApi\Cpanel([
       'host'        =>  'https://123.456.789.123:2087', // ip or domain complete with its protocol and port
       'username'    =>  'root', // username of your server, it usually root.
       'auth_type'   =>  'hash', // set 'hash' or 'password'
@@ -51,7 +42,7 @@ This is the example when you want to define your configuration while creating ne
 
 ```php
   <?php
-  $cpanel = new \Gufy\CpanelPhp\Cpanel([
+  $cpanel = new \Eugenevdm\WhmApi\Cpanel([
       'host'        =>  'https://123.456.789.123:2087', // required
       'username'    =>  'root', // required
       'auth_type'   =>  'hash', // optional, default 'hash'

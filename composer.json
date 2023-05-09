@@ -1,15 +1,15 @@
 {
-    "name": "gufy/cpanel-php",
-    "description": "Cpanel/WHM API for PHP",
+    "name": "eugenevdm/whm-api",
+    "description": "WHM/cPanel API for PHP",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mochamad Gufron",
-            "email": "mgufronefendi@gmail.com"
+            "name": "Eugene van der Merwe",
+            "email": "eugenevdm@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=8.1.0",
         "guzzlehttp/guzzle":"~6"
     },
     "require-dev": {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Gufy\\CpanelPhp\\": "src/"
+            "Eugenevdm\\WhmApi\\": "src/"
         }
     },
     "minimum-stability": "stable"
